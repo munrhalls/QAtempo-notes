@@ -3,12 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { QANotesListComponent } from './qanotes-list/qanotes-list.component';
-import { QanoteComponent } from './QANotesList/qanote/qanote.component';
-import { SetOverComponent } from './set-over/set-over.component';
+import { ChunkComponent } from './chunk/chunk.component';
+import { ListMakerComponent } from './list-maker/list-maker.component';
 
 @NgModule({
-  declarations: [AppComponent, QANotesListComponent, QanoteComponent, SetOverComponent],
+  declarations: [AppComponent, ChunkComponent, ListMakerComponent ],
   imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

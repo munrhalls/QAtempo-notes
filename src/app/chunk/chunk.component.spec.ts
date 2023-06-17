@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SetOverComponent } from './set-over.component';
+import { ChunkComponent } from './chunk.component';
 
-describe('SetOverComponent', () => {
-  let component: SetOverComponent;
-  let fixture: ComponentFixture<SetOverComponent>;
+describe('ChunkComponent', () => {
+  let component: ChunkComponent;
+  let fixture: ComponentFixture<ChunkComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [SetOverComponent]
+      declarations: [ChunkComponent]
     });
-    fixture = TestBed.createComponent(SetOverComponent);
+    fixture = TestBed.createComponent(ChunkComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
