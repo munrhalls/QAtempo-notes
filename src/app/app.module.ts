@@ -7,7 +7,7 @@ import { ChunkComponent } from './chunk/chunk.component';
 import { ListMakerComponent } from './list-maker/list-maker.component';
 
 @NgModule({
-  declarations: [AppComponent, ChunkComponent, ListMakerComponent ],
+  declarations: [AppComponent, ChunkComponent, ListMakerComponent],
   imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

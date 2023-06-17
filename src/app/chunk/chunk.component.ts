@@ -7,6 +7,16 @@ import { Component } from '@angular/core';
 })
 export class ChunkComponent {
   list = ['a', 'b', 'c'];
+  submit: string[] = [];
+  properSubmit: null | boolean = null;
 
-  checkChunk() {}
+  updateSubmit(event: Event, i: number) {
+    this.submit[i] = (<HTMLInputElement>event.target).value;
+  }
+  checkChunk() {
+    this.properSubmit = this.list.every(
+      (item, index) => this.list[index] === this.submit[index]
+    );
+    console.log(this.properSubmit);
+  }
 }
