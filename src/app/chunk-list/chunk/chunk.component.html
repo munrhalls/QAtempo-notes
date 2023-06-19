@@ -15,6 +15,12 @@
           type="text"
           [(ngModel)]="submit[i]"
         />
+        <p
+          *ngIf="properSubmit !== null"
+          [ngStyle]="{ color: submit[i] === list[i] ? 'green' : 'red' }"
+        >
+          Proper answer: {{ list[i] }}
+        </p>
       </li>
     </ul>
     <button type="submit" class="btn btn-primary" (click)="checkChunk()">
