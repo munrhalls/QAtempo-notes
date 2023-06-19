@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-chunk',
@@ -6,8 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./chunk.component.scss'],
 })
 export class ChunkComponent {
+  @Input('list') list: string[] = [];
+
   chunkName = 'prototype chunk';
-  list = ['a', 'b', 'c'];
   submit: string[] = [];
   properSubmit: null | boolean = null;
 
