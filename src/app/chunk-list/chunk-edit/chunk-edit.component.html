@@ -1,0 +1,27 @@
+<div class="chunk">
+  <h2>
+    Chunk: <span class="chunk-title">{{ title }}</span>
+  </h2>
+  <form name="title">
+    <label name="title" for="title" class="form-label"> Chunk title: </label>
+    <input name="title" id="title" type="text" [(ngModel)]="title" />
+    <ul>
+      <li *ngFor="let item of list; let i = index">
+        <label name="chunkItem + i" for="chunkItem + i" class="form-label">
+          Answer
+        </label>
+        <input
+          name="chunkItem + i"
+          id="chunkItem + 1"
+          class="form-control"
+          type="text"
+          [(ngModel)]="list[i]['answer']"
+        />
+      </li>
+    </ul>
+
+    <button type="submit" class="btn btn-primary" (click)="saveEdit()">
+      SAVE
+    </button>
+  </form>
+</div>

@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   mode = 'display';
   title = 'qatempo-notes';
+
+  onModeChange(mode: string) {
+    console.log(mode);
+  }
 }

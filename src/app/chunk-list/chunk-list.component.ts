@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Output, EventEmitter, Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-chunk-list',
@@ -7,6 +7,8 @@ import { Component, Input } from '@angular/core';
 })
 export class ChunkListComponent {
   @Input('mode') mode: string = '';
+  @Output() modeChanged = new EventEmitter<{ mode: string }>();
+
   listNames = ['List a', 'List b'];
   lists = [
     [

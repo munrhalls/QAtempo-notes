@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { ListMakerComponent } from './list-maker/list-maker.component';
 import { ChunkComponent } from './chunk-list/chunk/chunk.component';
 import { ChunkListComponent } from './chunk-list/chunk-list.component';
+import { ChunkEditComponent } from './chunk-list/chunk-edit/chunk-edit.component';
 
 const icons = {
   check2Circle,
@@ -21,6 +22,7 @@ const icons = {
     ChunkComponent,
     ListMakerComponent,
     ChunkListComponent,
+    ChunkEditComponent,
   ],
   imports: [BrowserModule, FormsModule, NgxBootstrapIconsModule.pick(icons)],
   providers: [],
