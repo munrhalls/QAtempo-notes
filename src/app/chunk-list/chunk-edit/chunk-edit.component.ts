@@ -11,7 +11,9 @@ export class ChunkEditComponent {
     answer: string;
   }[] = [];
   @Input('title') title: string = '';
-  @Output() modeChanged = new EventEmitter<{ mode: string }>();
+  @Output() modeChanged = new EventEmitter<string>();
 
-  saveEdit() {}
+  saveEdit() {
+    this.modeChanged.emit('display');
+  }
 }

@@ -7,7 +7,6 @@ import { Output, EventEmitter, Component, Input } from '@angular/core';
 })
 export class ChunkListComponent {
   @Input('mode') mode: string = '';
-  @Output() modeChanged = new EventEmitter<{ mode: string }>();
 
   listNames = ['List a', 'List b'];
   lists = [
@@ -22,4 +21,8 @@ export class ChunkListComponent {
       { question: 'Letter 6?', answer: 'g' },
     ],
   ];
+
+  onModeChanged(mode: string) {
+    console.log(mode);
+  }
 }
