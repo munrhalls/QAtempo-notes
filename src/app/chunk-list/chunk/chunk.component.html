@@ -14,7 +14,9 @@
         />
       </li>
     </ul>
-    <button class="btn btn-primary" (click)="checkChunk()">SUBMIT</button>
+    <button type="submit" class="btn btn-primary" (click)="checkChunk()">
+      SUBMIT
+    </button>
   </form>
   <h1 *ngIf="properSubmit === true">SUCCESS!</h1>
   <h1 *ngIf="properSubmit === false">NOT YET. TRY AGAIN.</h1>
