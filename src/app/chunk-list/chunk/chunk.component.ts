@@ -7,7 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 export class ChunkComponent {
   @Input('list') list: string[] = [];
-
   chunkName = 'prototype chunk';
   submit: string[] = [];
   properSubmit: null | boolean = null;
@@ -20,5 +19,10 @@ export class ChunkComponent {
       (item, index) => this.list[index] === this.submit[index]
     );
     console.log(this.properSubmit);
+  }
+  resetChunk() {
+    this.properSubmit = null;
+    this.submit = [];
+    console.log(this.submit);
   }
 }

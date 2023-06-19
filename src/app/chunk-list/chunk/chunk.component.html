@@ -5,19 +5,23 @@
   <form>
     <ul>
       <li *ngFor="let item of list; let i = index">
-        <label for="chunkItem + i" class="form-label">{{
+        <label name="chunkItem + i" for="chunkItem + i" class="form-label">{{
           "Chunk point: " + (i + 1)
         }}</label>
         <input
+          name="chunkItem + i"
           id="chunkItem + 1"
           class="form-control"
           type="text"
-          (input)="updateSubmit($event, i)"
+          [(ngModel)]="submit[i]"
         />
       </li>
     </ul>
     <button type="submit" class="btn btn-primary" (click)="checkChunk()">
       SUBMIT
+    </button>
+    <button type="submit" class="btn btn-info" (click)="resetChunk()">
+      RESET
     </button>
   </form>
   <h1 *ngIf="properSubmit === true">SUCCESS!</h1>
