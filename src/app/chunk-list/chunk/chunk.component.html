@@ -15,11 +15,11 @@
           type="text"
           [(ngModel)]="submit[i]"
         />
-        <p
-          *ngIf="properSubmit !== null"
-          [ngStyle]="{ color: submit[i] === list[i] ? 'green' : 'red' }"
-        >
-          Proper answer: {{ list[i] }}
+        <p class="wrong-answer" *ngIf="properSubmit === false">
+          Proper answer: {{ list[i] }} <span>X</span>
+        </p>
+        <p class="proper-answer" *ngIf="properSubmit === true">
+          Proper answer: {{ list[i] }} <span>CHECK</span>
         </p>
       </li>
     </ul>
