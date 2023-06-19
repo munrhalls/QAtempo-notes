@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { alarm, alarmFill, alignBottom } from 'ngx-bootstrap-icons';
 
 @Component({
   selector: 'app-chunk',

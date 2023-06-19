@@ -16,7 +16,7 @@
           [(ngModel)]="submit[i]"
         />
         <p class="wrong-answer" *ngIf="properSubmit === false">
-          Proper answer: {{ list[i] }} <span>X</span>
+          Proper answer: {{ list[i] }}
         </p>
         <p class="proper-answer" *ngIf="properSubmit === true">
           Proper answer: {{ list[i] }} <span>CHECK</span>
