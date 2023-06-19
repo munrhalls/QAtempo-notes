@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./chunk.component.scss'],
 })
 export class ChunkComponent {
+  chunkName = 'prototype chunk';
   list = ['a', 'b', 'c'];
   submit: string[] = [];
   properSubmit: null | boolean = null;
