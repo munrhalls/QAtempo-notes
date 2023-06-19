@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgxBootstrapIconsModule } from 'ngx-bootstrap-icons';
-import { alarm, alarmFill, alignBottom } from 'ngx-bootstrap-icons';
+import { check2Circle, xCircle, alignBottom } from 'ngx-bootstrap-icons';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
@@ -10,8 +10,8 @@ import { ChunkComponent } from './chunk-list/chunk/chunk.component';
 import { ChunkListComponent } from './chunk-list/chunk-list.component';
 
 const icons = {
-  alarm,
-  alarmFill,
+  check2Circle,
+  xCircle,
   alignBottom,
 };
 
