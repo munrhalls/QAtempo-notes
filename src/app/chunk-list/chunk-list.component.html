@@ -1,1 +1,5 @@
-<app-chunk *ngFor="let instance of lists" [list]="instance"></app-chunk>
+<app-chunk
+  *ngFor="let instance of lists; let i = index"
+  [title]="listNames[i]"
+  [list]="instance"
+></app-chunk>

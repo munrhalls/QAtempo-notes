@@ -12,6 +12,8 @@ export class ChunkComponent {
     question: string;
     answer: string;
   }[] = [];
+  @Input('title') title: string = '';
+
   submit: string[] = [];
   properSubmit: null | boolean = null;
 

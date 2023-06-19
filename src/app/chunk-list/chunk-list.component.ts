@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./chunk-list.component.scss'],
 })
 export class ChunkListComponent {
+  listNames = ['List a', 'List b'];
   lists = [
     [{ question: 'Letter?', answer: 'a' }],
     [{ question: 'Letter?', answer: 'b' }],
