@@ -16,6 +16,7 @@
           [(ngModel)]="submit[i]"
         />
         <p
+          class="mt-2"
           [ngStyle]="{ color: submit[i] === list[i] ? 'green' : 'red' }"
           *ngIf="properSubmit !== null"
         >
