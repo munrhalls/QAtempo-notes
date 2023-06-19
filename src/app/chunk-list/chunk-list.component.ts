@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class ChunkListComponent {
   lists = [
-    ['a', 'b', 'c'],
-    ['d', 'f', 'g'],
+    [{ question: 'Letter?', answer: 'a' }],
+    [{ question: 'Letter?', answer: 'b' }],
   ];
 }
