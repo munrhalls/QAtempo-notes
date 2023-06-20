@@ -1,18 +1,11 @@
 <div class="container pt-3">
-  <h1>Chunker</h1>
-  <div class="row">
-    <div class="col">
-      <button
-        class="btn btn-secondary"
-        (click)="mode = mode === 'display' ? 'edit' : 'display'"
-      >
-        EDIT
-      </button>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <app-chunk-list [mode]="mode"></app-chunk-list>
-    </div>
+  <h1>Exam yourself</h1>
+  <div *ngFor="let instance of chunks">
+    <app-display
+      *ngIf="instance.mode === 'display'"
+      [chunk]="instance"
+    ></app-display>
+
+    <app-edit *ngIf="instance.mode === 'edit'"></app-edit>
   </div>
 </div>

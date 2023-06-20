@@ -6,10 +6,27 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  mode = 'display';
-  title = 'qatempo-notes';
+  chunks: {
+    title: string;
+    list: { question: string; answer: string }[];
+    mode: string;
+  }[] = [
+    {
+      title: 'Letters',
+      list: [{ question: 'Letter 1?', answer: 'a' }],
+      mode: 'display',
+    },
+    {
+      title: 'Letters',
+      list: [{ question: 'Letter 2?', answer: 'b' }],
+      mode: 'display',
+    },
+    {
+      title: 'Letters',
+      list: [{ question: 'Letter 3?', answer: 'c' }],
+      mode: 'display',
+    },
+  ];
 
-  onModeChange(mode: string) {
-    console.log(mode);
-  }
+  title = 'exam-yourself';
 }
