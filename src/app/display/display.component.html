@@ -1,6 +1,17 @@
 <div class="menu">
-  <p>{{ chunk.difficulty }}</p>
-  <button class="btn btn-info" (click)="chunk.mode = 'edit'">EDIT</button>
+  <label
+    >Difficulty:
+    <span class="{{ chunk.difficulty }}">{{ chunk.difficulty }}</span></label
+  >
+
+  <i-bs
+    style="cursor: pointer"
+    name="pencil-square"
+    width="25"
+    height="25"
+    (click)="chunk.mode = 'edit'"
+  >
+  </i-bs>
 </div>
 
 <h2>{{ chunk.title }}</h2>

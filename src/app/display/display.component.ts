@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-display',
   templateUrl: './display.component.html',
-  styleUrls: ['./display.component.scss'],
+  styleUrls: ['./display.component.scss', '../app.custom.scss'],
 })
 export class DisplayComponent {
   @Input('chunk') chunk!: {
