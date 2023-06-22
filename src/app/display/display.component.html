@@ -1,29 +1,32 @@
 <div class="menu">
-  <label
-    >Difficulty:
-    <span class="badge {{ chunk.difficulty }}">{{
-      chunk.difficulty
-    }}</span></label
-  >
+  <div class="difficulty-marker">
+    <label
+      >Difficulty:
+      <span class="badge {{ chunk.difficulty }}">{{
+        chunk.difficulty
+      }}</span></label
+    >
+  </div>
 
-  <i-bs
-    style="cursor: pointer"
-    name="cursor-fill"
-    width="15"
-    height="15"
-  ></i-bs>
-  <i-bs
-    style="cursor: pointer"
-    name="pencil-square"
-    width="25"
-    height="25"
-    (click)="chunk.mode = 'edit'"
-  >
-  </i-bs>
-
-  <span style="margin-left: 0.25rem; font-weight: bold; font-size: 0.75rem"
-    >EDIT</span
-  >
+  <div class="mode-btns">
+    <i-bs
+      style="cursor: pointer"
+      name="cursor-fill"
+      width="15"
+      height="15"
+    ></i-bs>
+    <i-bs
+      style="cursor: pointer"
+      name="pencil-square"
+      width="25"
+      height="25"
+      (click)="chunk.mode = 'edit'"
+    >
+    </i-bs>
+    <span style="margin-left: 0.25rem; font-weight: bold; font-size: 0.75rem"
+      >EDIT</span
+    >
+  </div>
 </div>
 
 <div class="examsheet">
