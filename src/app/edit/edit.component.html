@@ -18,5 +18,12 @@
       [(ngModel)]="point.answer"
       [ngModelOptions]="{ standalone: true }"
     />
+    <input
+      type="button"
+      class="btn btn-danger"
+      value="DELETE"
+      (click)="deletePoint(point)"
+    />
   </div>
+  <button>ADD POINT</button>
 </form>
