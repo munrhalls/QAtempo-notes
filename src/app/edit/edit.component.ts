@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { Chunk } from '../app.model';
 
 @Component({
@@ -7,10 +8,9 @@ import { Chunk } from '../app.model';
   styleUrls: ['./edit.component.scss', '../app.custom.scss'],
 })
 export class EditComponent {
-  @Input('chunk') chunk!: {
-    title: string;
-    list: { question: string; answer: string }[];
-    difficulty: 'beginner' | 'intermediate' | 'advanced';
-    mode: string;
-  };
+  @Input('chunk') chunk = {} as Chunk;
+
+  form = new FormGroup({
+    difficulty: new FormControl(this.chunk.difficulty),
+  });
 }

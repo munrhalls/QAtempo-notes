@@ -42,3 +42,25 @@
     hsla(0, 0%, 84%, 1) 100%
   );
 }
+
+.radio h2 {
+  margin-bottom: 1rem;
+  width: 40%;
+  @media only screen and (max-width: 600px) {
+    width: 90%;
+  }
+}
+.radio h3 {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  @media only screen and (max-width: 600px) {
+    width: 90%;
+  }
+}
+
+.radio input {
+  height: 1.5rem;
+  width: 2rem;
+  margin-left: auto;
+}

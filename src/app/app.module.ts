@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, FormControl, FormGroup } from '@angular/forms';
 import { NgxBootstrapIconsModule } from 'ngx-bootstrap-icons';
 import {
   eyeFill,
@@ -32,7 +32,13 @@ const icons = {
 
 @NgModule({
   declarations: [AppComponent, DisplayComponent, EditComponent],
-  imports: [BrowserModule, FormsModule, NgxBootstrapIconsModule.pick(icons)],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    FormControl,
+    FormGroup,
+    NgxBootstrapIconsModule.pick(icons),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
