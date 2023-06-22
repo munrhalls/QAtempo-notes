@@ -1,14 +1,9 @@
 <div class="menu">
-  <div class="difficulty-marker">
-    <label
-      >Difficulty:
-      <span class="badge {{ chunk.difficulty }}">{{
-        chunk.difficulty
-      }}</span></label
-    >
-  </div>
-
-  <div class="mode-btns">
+  <div class="difficulty-marker">Difficulty:</div>
+  <button class="badge btn {{ chunk.difficulty }}">
+    {{ chunk.difficulty }}
+  </button>
+  <button class="mode-btns btn btn-light">
     <i-bs
       class="d-flex justify-content-center align-items-center"
       style="cursor: pointer"
@@ -30,7 +25,7 @@
       style="margin-left: 0.5rem; font-weight: bold; font-size: 0.75rem"
       >EDIT</span
     >
-  </div>
+  </button>
 
   <button
     style="margin-left: 1rem; font-weight: bold"

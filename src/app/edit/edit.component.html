@@ -1,12 +1,12 @@
 <div class="menu">
   <label
     >Difficulty:
-    <span class="badge {{ chunk.difficulty }}">{{
-      chunk.difficulty
-    }}</span></label
+    <button class="badge btn {{ chunk.difficulty }}">
+      {{ chunk.difficulty }}
+    </button></label
   >
 
-  <div class="mode-btns">
+  <button class="mode-btns btn btn-light">
     <i-bs
       class="d-flex justify-content-center align-items-center"
       style="cursor: pointer"
@@ -30,7 +30,7 @@
       style="margin-left: 0.5rem; font-weight: bold; font-size: 0.75rem"
       >BACK TO DISPLAY</span
     >
-  </div>
+  </button>
 </div>
 
 <div class="examsheet-edit" name="chunk.title">
