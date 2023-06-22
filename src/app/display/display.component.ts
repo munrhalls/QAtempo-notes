@@ -16,7 +16,8 @@ export class DisplayComponent {
 
   checkAnswers() {
     this.passExam = this.chunk.list.every(
-      (item, index) => item.answer === this.answers[index]
+      (item, index) =>
+        item.answer.toUpperCase() === this.answers[index].toUpperCase()
     );
   }
 
