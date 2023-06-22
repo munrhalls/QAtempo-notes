@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { NgxBootstrapIconsModule } from 'ngx-bootstrap-icons';
 import {
   fileEarmarkSpreadsheetFill,
+  fileEarmarkSpreadsheet,
   display,
   pencilSquare,
   check2Circle,
@@ -17,6 +18,7 @@ import { EditComponent } from './edit/edit.component';
 
 const icons = {
   fileEarmarkSpreadsheetFill,
+  fileEarmarkSpreadsheet,
   display,
   pencilSquare,
   check2Circle,
