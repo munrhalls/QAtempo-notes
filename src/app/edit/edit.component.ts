@@ -4,7 +4,7 @@ import { Chunk } from '../app.model';
 @Component({
   selector: 'app-edit',
   templateUrl: './edit.component.html',
-  styleUrls: ['./edit.component.scss'],
+  styleUrls: ['./edit.component.scss', '../app.custom.scss'],
 })
 export class EditComponent {
   @Input('chunk') chunk!: {
