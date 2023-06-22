@@ -6,20 +6,24 @@
     }}</span></label
   >
 
-  <i-bs style="cursor: pointer" name="cursor-fill" width="15" height="15">
-  </i-bs>
-  <i-bs
-    style="cursor: pointer"
-    name="display"
-    width="25"
-    height="25"
-    (click)="chunk.mode = 'display'"
-  >
-  </i-bs>
+  <div class="mode-btns">
+    <i-bs style="cursor: pointer" name="cursor-fill" width="15" height="15">
+    </i-bs>
+    <i-bs
+      style="cursor: pointer"
+      name="display"
+      width="25"
+      height="25"
+      (click)="chunk.mode = 'display'"
+    >
+    </i-bs>
 
-  <span style="margin-left: 0.25rem; font-weight: bold; font-size: 0.75rem"
-    >BACK TO DISPLAY</span
-  >
+    <span
+      class="d-flex justify-content-center align-items-center"
+      style="margin-left: 0.5rem; font-weight: bold; font-size: 0.75rem"
+      >BACK TO DISPLAY</span
+    >
+  </div>
 </div>
 
 <div class="examsheet-edit" name="chunk.title">
