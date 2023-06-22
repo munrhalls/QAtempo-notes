@@ -67,5 +67,8 @@ export class AppComponent {
       )
     );
   }
+  onExamDeleted(examTitle: string) {
+    this.chunks = this.chunks.filter((chunk) => chunk.title !== examTitle);
+  }
   title = 'exam-yourself';
 }
