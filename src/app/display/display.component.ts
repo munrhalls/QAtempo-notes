@@ -12,4 +12,11 @@ export class DisplayComponent {
     mode: string;
   };
   answers: string[] = [];
+  passExam: null | boolean = null;
+
+  checkAnswers() {
+    this.passExam = this.chunk.list.every(
+      (item, index) => item.answer === this.answers[index]
+    );
+  }
 }
