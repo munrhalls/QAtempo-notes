@@ -22,8 +22,8 @@
       type="button"
       class="btn btn-danger"
       value="DELETE"
-      (click)="deletePoint(point)"
+      (click)="this.chunk.list.splice(i, 1)"
     />
   </div>
-  <button>ADD POINT</button>
+  <button class="btn btn-primary">ADD POINT</button>
 </form>

@@ -11,9 +11,4 @@ export class EditComponent {
     list: { question: string; answer: string }[];
     mode: string;
   };
-  deletePoint(point: { question: string; answer: string }) {
-    this.chunk.list = this.chunk.list.filter(
-      (item) => item.question !== point.question
-    );
-  }
 }
