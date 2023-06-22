@@ -1,7 +1,9 @@
 <div class="menu">
   <label
     >Difficulty:
-    <span class="{{ chunk.difficulty }}">{{ chunk.difficulty }}</span></label
+    <span class="badge {{ chunk.difficulty }}">{{
+      chunk.difficulty
+    }}</span></label
   >
 
   <i-bs style="cursor: pointer" name="cursor-fill" width="15" height="15">
@@ -14,6 +16,10 @@
     (click)="chunk.mode = 'display'"
   >
   </i-bs>
+
+  <span style="margin-left: 0.25rem; font-weight: bold; font-size: 0.75rem"
+    >BACK TO DISPLAY</span
+  >
 </div>
 
 <div class="examsheet-edit" name="chunk.title">
@@ -85,15 +91,21 @@
       />
       <input
         type="button"
+        style="font-weight: bold"
         class="form-control mt-2 mb-2 btn btn-danger"
-        value="DELETE"
+        value="DELETE EXAM POINT"
         (click)="this.chunk.list.splice(i, 1)"
       />
 
       <hr class="mt-2 mb-2" />
     </div>
+
+    <button
+      style="font-weight: bold"
+      class="btn btn-primary"
+      (click)="addExamPoint()"
+    >
+      ADD EXAM POINT
+    </button>
   </div>
-  <button class="btn btn-primary" (click)="addExamPoint()">
-    ADD EXAM POINT
-  </button>
 </div>
