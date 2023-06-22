@@ -43,23 +43,20 @@
   );
 }
 
-.radio h2 {
-  margin-bottom: 1rem;
-  width: 40%;
-  @media only screen and (max-width: 600px) {
-    width: 90%;
-  }
+.difficulty h2 {
+  font-size: 1.25rem;
 }
-.radio h3 {
+.difficulty .radio {
+  margin-bottom: 1rem;
   display: flex;
   justify-content: space-between;
   width: 40%;
+  font-size: 1.25rem;
   @media only screen and (max-width: 600px) {
     width: 90%;
   }
 }
-
-.radio input {
+.difficulty .radio input {
   height: 1.5rem;
   width: 2rem;
   margin-left: auto;
