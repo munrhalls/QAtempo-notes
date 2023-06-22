@@ -9,22 +9,32 @@ import { Chunk, List } from './app.model';
 export class AppComponent {
   chunks: Chunk[] = [
     new Chunk(
-      'Letters 1-3',
+      'Example exam: alphabet letters 1-8.',
       [
         { question: 'Letter 1?', answer: 'a' },
         { question: 'Letter 2?', answer: 'b' },
         { question: 'Letter 3?', answer: 'c' },
+        { question: 'Letter 4?', answer: 'd' },
+        { question: 'Letter 5?', answer: 'e' },
+        { question: 'Letter 6?', answer: 'f' },
+        { question: 'Letter 7?', answer: 'g' },
+        { question: 'Letter 8?', answer: 'h' },
       ],
       'beginner',
       'display',
       'intro'
     ),
     new Chunk(
-      'Letters 4-6',
+      'Example exam: alphabet letters 9-16.',
       [
-        { question: 'Letter 4?', answer: 'd' },
-        { question: 'Letter 5?', answer: 'e' },
-        { question: 'Letter 6?', answer: 'f' },
+        { question: 'Letter 9?', answer: 'i' },
+        { question: 'Letter 10?', answer: 'j' },
+        { question: 'Letter 11?', answer: 'k' },
+        { question: 'Letter 12?', answer: 'l' },
+        { question: 'Letter 13?', answer: 'm' },
+        { question: 'Letter 14?', answer: 'n' },
+        { question: 'Letter 15?', answer: 'o' },
+        { question: 'Letter 16?', answer: 'p' },
       ],
       'beginner',
       'display',
@@ -32,9 +42,9 @@ export class AppComponent {
     ),
   ];
   addNewChunk() {
-    this.chunks.push(
+    this.chunks.unshift(
       new Chunk(
-        'Exam title..',
+        'New exam title..',
         [
           {
             question: 'Question 1. How to make an exam in here?',
