@@ -50,29 +50,50 @@
     </div>
   </form>
 
-  <label>Title: </label>
-  <input
-    type="text"
-    [(ngModel)]="chunk.title"
-    [ngModelOptions]="{ standalone: true }"
-  />
-  <div *ngFor="let point of chunk.list; let i = index">
+  <div class="mt-3 form-check">
+    <label style="font-weight: bold; font-size: 1.25rem" class="form-label"
+      >Exam title:
+    </label>
     <input
+      class="form-control"
       type="text"
-      [(ngModel)]="point.question"
+      [(ngModel)]="chunk.title"
       [ngModelOptions]="{ standalone: true }"
-    />
-    <input
-      type="text"
-      [(ngModel)]="point.answer"
-      [ngModelOptions]="{ standalone: true }"
-    />
-    <input
-      type="button"
-      class="btn btn-danger"
-      value="DELETE"
-      (click)="this.chunk.list.splice(i, 1)"
     />
   </div>
-  <button class="btn btn-primary">ADD POINT</button>
+
+  <div class="mt-3 form-check">
+    <h2 style="font-weight: bold; font-size: 1.25rem">
+      Exam: Questions & Answers
+    </h2>
+
+    <div *ngFor="let point of chunk.list; let i = index">
+      <label style="font-weight: bold; font-size: 1.15rem"
+        >Point {{ i + 1 }}</label
+      >
+      <input
+        class="form-control mt-3"
+        type="text"
+        [(ngModel)]="point.question"
+        [ngModelOptions]="{ standalone: true }"
+      />
+      <input
+        class="form-control mt-3"
+        type="text"
+        [(ngModel)]="point.answer"
+        [ngModelOptions]="{ standalone: true }"
+      />
+      <input
+        type="button"
+        class="form-control mt-2 mb-2 btn btn-danger"
+        value="DELETE"
+        (click)="this.chunk.list.splice(i, 1)"
+      />
+
+      <hr class="mt-2 mb-2" />
+    </div>
+  </div>
+  <button class="btn btn-primary" (click)="addExamPoint()">
+    ADD EXAM POINT
+  </button>
 </div>

@@ -8,4 +8,7 @@ import { Chunk } from '../app.model';
 })
 export class EditComponent {
   @Input('chunk') chunk = {} as Chunk;
+  addExamPoint() {
+    this.chunk.list.push({ question: '', answer: '' });
+  }
 }
