@@ -9,6 +9,7 @@ export class DisplayComponent {
   @Input('chunk') chunk!: {
     title: string;
     list: { question: string; answer: string }[];
+    difficulty: 'beginner' | 'intermediate' | 'advanced';
     mode: string;
   };
   answers: string[] = [];

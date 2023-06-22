@@ -1,11 +1,41 @@
-<div class="container pt-3">
-  <h1>Exam yourself</h1>
-  <div class="chunk" *ngFor="let instance of chunks">
-    <app-display
-      *ngIf="instance.mode === 'display'"
-      [chunk]="instance"
-    ></app-display>
+<nav class="navbar navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Examine yourself</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="#">Log in</a>
+        <a class="nav-link" href="#">Register</a>
+      </div>
+    </div>
+  </div>
+</nav>
 
-    <app-edit *ngIf="instance.mode === 'edit'" [chunk]="instance"></app-edit>
+<div class="container pt-3">
+  <h1>Your exam sheets</h1>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="chunk" *ngFor="let instance of chunks">
+        <app-display
+          *ngIf="instance.mode === 'display'"
+          [chunk]="instance"
+        ></app-display>
+
+        <app-edit
+          *ngIf="instance.mode === 'edit'"
+          [chunk]="instance"
+        ></app-edit>
+      </div>
+    </div>
   </div>
 </div>

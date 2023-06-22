@@ -2,6 +2,14 @@
   DISPLAY
 </button>
 <form name="chunk.title">
+  <div>
+    <label>Exam difficulty:</label>
+    <input
+      type="radio"
+      value="beginner"
+      (input)="chunk.difficulty = 'beginner'"
+    />
+  </div>
   <label>Title: </label>
   <input
     type="text"

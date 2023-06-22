@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Chunk } from '../app.model';
 
 @Component({
   selector: 'app-edit',
@@ -9,6 +10,7 @@ export class EditComponent {
   @Input('chunk') chunk!: {
     title: string;
     list: { question: string; answer: string }[];
+    difficulty: 'beginner' | 'intermediate' | 'advanced';
     mode: string;
   };
 }
