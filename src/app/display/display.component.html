@@ -1,4 +1,22 @@
-<button class="btn btn-info" (click)="chunk.mode = 'edit'">EDIT</button>
+<div class="menu">
+  <div class="dropdown">
+    <button
+      class="btn btn-secondary dropdown-toggle"
+      type="button"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+    >
+      Difficulty
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Beginner</a></li>
+      <li><a class="dropdown-item" href="#">Intermediate</a></li>
+      <li><a class="dropdown-item" href="#">Advanced</a></li>
+    </ul>
+  </div>
+  <button class="btn btn-info" (click)="chunk.mode = 'edit'">EDIT</button>
+</div>
+
 <h2>{{ chunk.title }}</h2>
 <form name="examsheet">
   <div *ngFor="let point of chunk.list; let i = index">

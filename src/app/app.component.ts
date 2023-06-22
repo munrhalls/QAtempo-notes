@@ -15,11 +15,13 @@ export class AppComponent {
         { question: 'Letter 2?', answer: 'b' },
         { question: 'Letter 3?', answer: 'c' },
       ],
+      'beginner',
       'display'
     ),
     new Chunk(
       'Letters 4-6',
       [{ question: 'Letter 4?', answer: 'd' }],
+      'beginner',
       'display'
     ),
   ];
