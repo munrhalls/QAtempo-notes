@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { NgxBootstrapIconsModule } from 'ngx-bootstrap-icons';
 import {
+  eye,
   fileEarmarkSpreadsheetFill,
   fileEarmarkSpreadsheet,
   display,
@@ -17,6 +18,7 @@ import { DisplayComponent } from './display/display.component';
 import { EditComponent } from './edit/edit.component';
 
 const icons = {
+  eye,
   fileEarmarkSpreadsheetFill,
   fileEarmarkSpreadsheet,
   display,

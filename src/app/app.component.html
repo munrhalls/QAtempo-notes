@@ -106,18 +106,21 @@
   </div>
 
   <div class="row">
-    <div class="col-xs-12">
-      <div class="chunk" *ngFor="let instance of chunks">
-        <app-display
-          *ngIf="instance.mode === 'display'"
-          [chunk]="instance"
-        ></app-display>
+    <div
+      class="chunk col-xs-12 d-flex justify-content-start align-items-start"
+      *ngFor="let instance of chunks"
+    >
+      <app-display
+        style="width: 100%"
+        [chunk]="instance"
+        *ngIf="instance.mode === 'display'"
+      ></app-display>
 
-        <app-edit
-          *ngIf="instance.mode === 'edit'"
-          [chunk]="instance"
-        ></app-edit>
-      </div>
+      <app-edit
+        style="width: 100%"
+        [chunk]="instance"
+        *ngIf="instance.mode === 'edit'"
+      ></app-edit>
     </div>
   </div>
 </div>
