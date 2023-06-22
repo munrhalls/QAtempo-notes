@@ -1,6 +1,19 @@
-<button class="btn btn-secondary" (click)="chunk.mode = 'display'">
-  DISPLAY
-</button>
+<div class="menu">
+  <label
+    >Difficulty:
+    <span class="{{ chunk.difficulty }}">{{ chunk.difficulty }}</span></label
+  >
+
+  <i-bs
+    style="cursor: pointer"
+    name="display"
+    width="25"
+    height="25"
+    (click)="chunk.mode = 'display'"
+  >
+  </i-bs>
+</div>
+
 <form name="chunk.title">
   <div>
     <label>Exam difficulty:</label>
