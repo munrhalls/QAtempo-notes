@@ -32,13 +32,21 @@
   <form name="examsheet">
     <div *ngFor="let point of chunk.list; let i = index">
       <div
+        class="form-check"
         *ngIf="
           chunk.displayFullness === 'full' ||
           (chunk.displayFullness === 'intro' && i < 2)
         "
       >
-        <p>{{ point.question }}</p>
-        <input name="answer- + index" type="text" [(ngModel)]="answers[i]" />
+        <label class="form-label" style="font-weight: bold">{{
+          point.question
+        }}</label>
+        <input
+          class="form-control"
+          name="answer- + index"
+          type="text"
+          [(ngModel)]="answers[i]"
+        />
       </div>
     </div>
 
@@ -73,6 +81,11 @@
       </button>
     </div>
   </form>
-  <p *ngIf="passExam === true">SUCCESS! YOU HAVE PASSED THE EXAM.</p>
-  <p *ngIf="passExam === false">NOT QUITE YET, PLEASE TRY AGAIN.</p>
+
+  <div class="mt-5 alert alert-success" role="alert" *ngIf="passExam === true">
+    SUCCESS! YOU HAVE PASSED THE EXAM.
+  </div>
+  <div class="mt-5 alert alert-danger" role="alert" *ngIf="passExam === false">
+    NOT QUITE YET, PLEASE TRY AGAIN.
+  </div>
 </div>
