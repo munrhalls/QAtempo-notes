@@ -14,15 +14,17 @@
   </i-bs>
 </div>
 
-<h2>{{ chunk.title }}</h2>
-<form name="examsheet">
-  <div *ngFor="let point of chunk.list; let i = index">
-    <p>{{ point.question }}</p>
-    <input name="answer- + index" type="text" [(ngModel)]="answers[i]" />
-  </div>
-  <button type="submit" class="mt-3 btn btn-primary" (click)="checkAnswers()">
-    SUBMIT
-  </button>
-</form>
-<p *ngIf="passExam === true">SUCCESS</p>
-<p *ngIf="passExam === false">NOT YET, PLEASE TRY AGAIN</p>
+<div class="examsheet">
+  <h2>{{ chunk.title }}</h2>
+  <form name="examsheet">
+    <div *ngFor="let point of chunk.list; let i = index">
+      <p>{{ point.question }}</p>
+      <input name="answer- + index" type="text" [(ngModel)]="answers[i]" />
+    </div>
+    <button type="submit" class="mt-3 btn btn-primary" (click)="checkAnswers()">
+      SUBMIT
+    </button>
+  </form>
+  <p *ngIf="passExam === true">SUCCESS</p>
+  <p *ngIf="passExam === false">NOT YET, PLEASE TRY AGAIN</p>
+</div>
