@@ -9,6 +9,9 @@
     align-items: flex-start;
     justify-content: space-evenly;
     flex-wrap: nowrap;
+    font-size: 0.8rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 }
 .difficulty-marker,
@@ -20,6 +23,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     flex-wrap: nowrap;
+    font-size: 0.8rem;
   }
 }
 .delete-exam-btn {
