@@ -20,7 +20,11 @@ export class AppComponent {
     ),
     new Chunk(
       'Letters 4-6',
-      [{ question: 'Letter 4?', answer: 'd' }],
+      [
+        { question: 'Letter 4?', answer: 'd' },
+        { question: 'Letter 5?', answer: 'e' },
+        { question: 'Letter 6?', answer: 'f' },
+      ],
       'beginner',
       'display'
     ),
