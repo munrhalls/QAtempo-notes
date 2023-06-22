@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Chunk } from '../app.model';
 
 @Component({
   selector: 'app-display',
@@ -6,18 +7,12 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./display.component.scss', '../app.custom.scss'],
 })
 export class DisplayComponent {
-  @Input('chunk') chunk!: {
-    title: string;
-    list: { question: string; answer: string }[];
-    difficulty: 'beginner' | 'intermediate' | 'advanced';
-    mode: string;
-    displayFullness: string;
-  };
+  @Input('chunk') chunk = {} as Chunk;
   answers: string[] = [];
   passExam: null | boolean = null;
   deleteExamConfirm: boolean = false;
 
-  @Output() examDeleted = new EventEmitter<string>();
+  @Output() examDeleted = new EventEmitter<number>();
 
   checkAnswers() {
     this.passExam = this.chunk.list.every(
@@ -26,6 +21,8 @@ export class DisplayComponent {
   }
 
   deleteExam() {
-    this.examDeleted.emit(this.chunk.title);
+    this.examDeleted.emit(this.chunk.id);
+
+    this.deleteExamConfirm = false;
   }
 }

@@ -7,6 +7,7 @@ export class List {
   }
 }
 export class Chunk {
+  readonly id: number = Number();
   public title: string = '';
   public list: List[] = [];
   public difficulty: 'beginner' | 'intermediate' | 'advanced';
@@ -14,12 +15,14 @@ export class Chunk {
   public displayFullness: string = '';
 
   constructor(
+    id: number,
     title: string,
     list: List[],
     difficulty: 'beginner' | 'intermediate' | 'advanced',
     mode: string,
     displayFullness: 'intro' | 'full'
   ) {
+    this.id = id;
     this.title = title;
     this.list = list;
     this.difficulty = difficulty;

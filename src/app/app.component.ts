@@ -9,7 +9,9 @@ import { Chunk, List } from './app.model';
 export class AppComponent {
   chunks: Chunk[] = [
     new Chunk(
-      'Example exam: alphabet letters 1-8.',
+      Math.random() * new Date().getTime(),
+
+      'Simple example exam 1: alphabet letters 1-8.',
       [
         { question: 'Letter 1?', answer: 'a' },
         { question: 'Letter 2?', answer: 'b' },
@@ -25,7 +27,9 @@ export class AppComponent {
       'intro'
     ),
     new Chunk(
-      'Example exam: alphabet letters 9-16.',
+      Math.random() * new Date().getTime(),
+
+      'Simple example exam 2: alphabet letters 9-16.',
       [
         { question: 'Letter 9?', answer: 'i' },
         { question: 'Letter 10?', answer: 'j' },
@@ -44,6 +48,8 @@ export class AppComponent {
   addNewChunk() {
     this.chunks.unshift(
       new Chunk(
+        Math.random() * new Date().getTime(),
+
         'New exam title..',
         [
           {
@@ -77,8 +83,8 @@ export class AppComponent {
       )
     );
   }
-  onExamDeleted(examTitle: string) {
-    this.chunks = this.chunks.filter((chunk) => chunk.title !== examTitle);
+  onExamDeleted(id: number) {
+    this.chunks = this.chunks.filter((chunk) => chunk.id !== id);
   }
   title = 'exam-yourself';
 }

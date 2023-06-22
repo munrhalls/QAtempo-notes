@@ -215,6 +215,7 @@
       *ngFor="let instance of chunks"
     >
       <app-display
+        (examDeleted)="onExamDeleted($event)"
         style="width: 100%"
         [chunk]="instance"
         *ngIf="instance.mode === 'display'"
