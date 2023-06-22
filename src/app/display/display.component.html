@@ -1,4 +1,5 @@
 <button class="btn btn-info" (click)="chunk.mode = 'edit'">EDIT</button>
+<h2>{{ chunk.title }}</h2>
 <form name="examsheet">
   <div *ngFor="let point of chunk.list; let i = index">
     <p>{{ point.question }}</p>
