@@ -82,10 +82,20 @@
     </div>
   </form>
 
-  <div class="mt-5 alert alert-success" role="alert" *ngIf="passExam === true">
+  <div
+    style="font-size: 1.25rem; font-weight: bold"
+    class="mt-5 alert alert-success"
+    role="alert"
+    *ngIf="passExam === true"
+  >
     SUCCESS! YOU HAVE PASSED THE EXAM.
   </div>
-  <div class="mt-5 alert alert-danger" role="alert" *ngIf="passExam === false">
+  <div
+    style="font-size: 1.25rem; font-weight: bold"
+    class="mt-5 alert alert-danger"
+    role="alert"
+    *ngIf="passExam === false"
+  >
     NOT QUITE YET, PLEASE TRY AGAIN.
   </div>
 </div>
