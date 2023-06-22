@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-display',
@@ -15,10 +15,17 @@ export class DisplayComponent {
   };
   answers: string[] = [];
   passExam: null | boolean = null;
+  deleteExamConfirm: boolean = false;
+
+  @Output() examDeleted = new EventEmitter<string>();
 
   checkAnswers() {
     this.passExam = this.chunk.list.every(
       (item, index) => item.answer === this.answers[index]
     );
+  }
+
+  deleteExam() {
+    this.examDeleted.emit(this.chunk.title);
   }
 }
