@@ -76,15 +76,32 @@
         type="submit"
         class="mt-3 btn btn-primary"
         (click)="checkAnswers()"
+        *ngIf="passExam === null"
       >
         SUBMIT
+      </button>
+    </div>
+
+    <div *ngIf="chunk.displayFullness === 'full'">
+      <button
+        style="font-weight: bold"
+        type="submit"
+        class="mt-3 btn"
+        [ngClass]="{
+          'btn-success': passExam === true,
+          'btn-danger': passExam === false
+        }"
+        (click)="answers = []; passExam = null"
+        *ngIf="passExam !== null"
+      >
+        RE-TAKE EXAM {{ passExam === true ? "(optional)" : "" }}
       </button>
     </div>
   </form>
 
   <div
     style="font-size: 1.25rem; font-weight: bold"
-    class="mt-5 alert alert-success"
+    class="mt-3 alert alert-success"
     role="alert"
     *ngIf="passExam === true"
   >
@@ -92,7 +109,7 @@
   </div>
   <div
     style="font-size: 1.25rem; font-weight: bold"
-    class="mt-5 alert alert-danger"
+    class="mt-3 alert alert-danger"
     role="alert"
     *ngIf="passExam === false"
   >
