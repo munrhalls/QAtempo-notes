@@ -1,6 +1,6 @@
 <div class="container pt-3">
   <h1>Exam yourself</h1>
-  <div *ngFor="let instance of chunks">
+  <div class="chunk" *ngFor="let instance of chunks">
     <app-display
       *ngIf="instance.mode === 'display'"
       [chunk]="instance"

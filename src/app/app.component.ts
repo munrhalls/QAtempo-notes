@@ -10,14 +10,18 @@ export class AppComponent {
   chunks: Chunk[] = [
     new Chunk(
       'Letters 1-3',
-      [{ question: 'Letter 1?', answer: 'a' }],
+      [
+        { question: 'Letter 1?', answer: 'a' },
+        { question: 'Letter 2?', answer: 'b' },
+        { question: 'Letter 3?', answer: 'c' },
+      ],
       'display'
     ),
-    {
-      title: 'Letters',
-      list: [{ question: 'Letter 2?', answer: 'b' }],
-      mode: 'display',
-    },
+    new Chunk(
+      'Letters 4-6',
+      [{ question: 'Letter 4?', answer: 'd' }],
+      'display'
+    ),
   ];
 
   title = 'exam-yourself';

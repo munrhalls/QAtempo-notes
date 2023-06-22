@@ -1,7 +1,7 @@
+<button class="btn btn-info" (click)="chunk.mode = 'edit'">EDIT</button>
 <form name="examsheet">
   <div *ngFor="let point of chunk.list; let i = index">
     <p>{{ point.question }}</p>
-    <p>{{ point.answer }}</p>
+    <input name="answer- + index" type="text" [(ngModel)]="answers[i]" />
   </div>
 </form>
-<button class="btn btn-info" (click)="chunk.mode = 'edit'">EDIT</button>

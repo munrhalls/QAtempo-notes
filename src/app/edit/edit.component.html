@@ -1,3 +1,22 @@
 <button class="btn btn-secondary" (click)="chunk.mode = 'display'">
   DISPLAY
 </button>
+<form name="chunk.title">
+  <input
+    type="text"
+    [(ngModel)]="chunk.title"
+    [ngModelOptions]="{ standalone: true }"
+  />
+  <div *ngFor="let point of chunk.list; let i = index">
+    <input
+      type="text"
+      [(ngModel)]="point.question"
+      [ngModelOptions]="{ standalone: true }"
+    />
+    <input
+      type="text"
+      [(ngModel)]="point.answer"
+      [ngModelOptions]="{ standalone: true }"
+    />
+  </div>
+</form>
