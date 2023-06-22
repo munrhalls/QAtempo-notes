@@ -11,6 +11,7 @@ export class DisplayComponent {
     list: { question: string; answer: string }[];
     difficulty: 'beginner' | 'intermediate' | 'advanced';
     mode: string;
+    displayFullness: string;
   };
   answers: string[] = [];
   passExam: null | boolean = null;

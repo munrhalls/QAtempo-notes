@@ -11,16 +11,19 @@ export class Chunk {
   public list: List[] = [];
   public difficulty: 'beginner' | 'intermediate' | 'advanced';
   public mode: string = '';
+  public displayFullness: string = '';
 
   constructor(
     title: string,
     list: List[],
     difficulty: 'beginner' | 'intermediate' | 'advanced',
-    mode: string
+    mode: string,
+    displayFullness: 'intro' | 'full'
   ) {
     this.title = title;
     this.list = list;
     this.difficulty = difficulty;
     this.mode = mode;
+    this.displayFullness = displayFullness;
   }
 }

@@ -16,7 +16,8 @@ export class AppComponent {
         { question: 'Letter 3?', answer: 'c' },
       ],
       'beginner',
-      'display'
+      'display',
+      'intro'
     ),
     new Chunk(
       'Letters 4-6',
@@ -26,7 +27,8 @@ export class AppComponent {
         { question: 'Letter 6?', answer: 'f' },
       ],
       'beginner',
-      'display'
+      'display',
+      'intro'
     ),
   ];
 
