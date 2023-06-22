@@ -15,36 +15,34 @@
 </div>
 
 <div class="examsheet-edit" name="chunk.title">
-  <form class="difficulty" [formGroup]="form">
+  <form class="difficulty">
     <h2>Exam difficulty:</h2>
 
     <div class="radio">
-      <label for="beginner"> Beginner </label>
+      <label> Beginner </label>
       <input
+        name="difficulty"
         style="cursor: pointer"
         type="radio"
-        formControlName="difficulty"
         value="beginner"
         (change)="chunk.difficulty = 'beginner'"
       />
     </div>
     <div class="radio">
-      <label for="intermediate"> Intermediate </label>
+      <label> Intermediate </label>
       <input
+        name="difficulty"
         style="cursor: pointer"
         type="radio"
-        formControlName="difficulty"
-        value="intermediate"
         (change)="chunk.difficulty = 'intermediate'"
       />
     </div>
     <div class="radio">
-      <label for="advanced"> Advanced </label>
+      <label> Advanced </label>
       <input
+        name="difficulty"
         style="cursor: pointer"
         type="radio"
-        formControlName="difficulty"
-        value="advanced"
         (change)="chunk.difficulty = 'advanced'"
       />
     </div>
