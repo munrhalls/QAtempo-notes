@@ -6,6 +6,6 @@
       [chunk]="instance"
     ></app-display>
 
-    <app-edit *ngIf="instance.mode === 'edit'"></app-edit>
+    <app-edit *ngIf="instance.mode === 'edit'" [chunk]="instance"></app-edit>
   </div>
 </div>

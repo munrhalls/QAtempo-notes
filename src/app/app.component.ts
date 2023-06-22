@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Chunk, List } from './app.model';
 
 @Component({
   selector: 'app-root',
@@ -6,24 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  chunks: {
-    title: string;
-    list: { question: string; answer: string }[];
-    mode: string;
-  }[] = [
-    {
-      title: 'Letters',
-      list: [{ question: 'Letter 1?', answer: 'a' }],
-      mode: 'display',
-    },
+  chunks: Chunk[] = [
+    new Chunk(
+      'Letters 1-3',
+      [{ question: 'Letter 1?', answer: 'a' }],
+      'display'
+    ),
     {
       title: 'Letters',
       list: [{ question: 'Letter 2?', answer: 'b' }],
-      mode: 'display',
-    },
-    {
-      title: 'Letters',
-      list: [{ question: 'Letter 3?', answer: 'c' }],
       mode: 'display',
     },
   ];
