@@ -18,3 +18,27 @@
   border: 1px solid var(--bs-gray-600);
   border-radius: 5px;
 }
+
+.examsheet-edit {
+  width: 100%;
+  padding: 1rem;
+  background: hsla(0, 0%, 100%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(0, 0%, 100%, 1) 0%,
+    hsla(0, 0%, 84%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(0, 0%, 100%, 1) 0%,
+    hsla(0, 0%, 84%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(0, 0%, 100%, 1) 0%,
+    hsla(0, 0%, 84%, 1) 100%
+  );
+}

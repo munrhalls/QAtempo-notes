@@ -14,30 +14,37 @@
   </i-bs>
 </div>
 
-<form name="chunk.title">
+<form class="examsheet-edit" name="chunk.title">
   <div>
-    <label>Exam difficulty:</label>
-    <label>Beginner</label>
+    <span>Exam difficulty:</span>
 
-    <input
-      type="radio"
-      value="beginner"
-      (input)="chunk.difficulty = 'beginner'"
-    />
-    <label>Intermediate</label>
-
-    <input
-      type="radio"
-      value="beginner"
-      (input)="chunk.difficulty = 'intermediate'"
-    />
-    <label>Advanced</label>
-
-    <input
-      type="radio"
-      value="beginner"
-      (input)="chunk.difficulty = 'advanced'"
-    />
+    <div>
+      <label for="beginner">Beginner</label>
+      <input
+        type="radio"
+        name="difficulty"
+        value="beginner"
+        (input)="chunk.difficulty = 'beginner'"
+      />
+    </div>
+    <div>
+      <label for="intermediate">Intermediate</label>
+      <input
+        type="radio"
+        name="difficulty"
+        value="intermediate"
+        (input)="chunk.difficulty = 'intermediate'"
+      />
+    </div>
+    <div>
+      <label for="advanced">Advanced</label>
+      <input
+        type="radio"
+        name="difficulty"
+        value="advanced"
+        (input)="chunk.difficulty = 'advanced'"
+      />
+    </div>
   </div>
   <label>Title: </label>
   <input
